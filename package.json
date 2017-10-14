@@ -4,7 +4,8 @@
   "description": "Convert a number or a string to a finite number.",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "web/"
   ],
   "scripts": {
     "lint": "eslint src test",
