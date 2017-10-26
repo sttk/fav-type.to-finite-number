@@ -14,7 +14,7 @@ To install from npm:
 $ npm install --save @fav/type.to-finite-number
 ```
 
-***NOTE:*** *npm < 2.7.0 does not support scoped package, but even old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/type.to-finite-number/` direcotry manually.*
+***NOTE:*** *npm < 2.7.0 does not support scoped package, but even old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/type.to-finite-number/` directory manually.*
 
 ## Usage
 
