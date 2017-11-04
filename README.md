@@ -18,7 +18,7 @@ $ npm install --save @fav/type.to-finite-number
 
 ## Usage
 
-For Node.js, when installing `@fav/type.to-finite-number` from npm:
+For Node.js:
 
 ```js
 var toFiniteNumber = require('@fav/type.to-finite-number');
