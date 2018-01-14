@@ -1,6 +1,6 @@
 # [@fav/type.to-finite-number][repo-url] [![NPM version][npm-img]][npm-url] [![MIT License][mit-img]][mit-url] [![Build Status][travis-img]][travis-url] [![Build Status][appveyor-img]][appveyor-url] [![Coverage status][coverage-img]][coverage-url]
 
-Convert a number or a string to a finite number.
+Converts a number or a string to a finite number.
 
 > "fav" is an abbreviation of "favorite" and also the acronym of "for all versions".
 > This package is intended to support all Node.js versions and many browsers as possible.
@@ -42,7 +42,7 @@ toFiniteNumber(123); // => 123
 
 ### <u>toFiniteNumber(value): number</u>
 
-Convert a number or a string to a finite number.
+Converts a number or a string to a finite number.
 If *value* is a floating point number, this function discards decimals.
 If *value* is neither a finite number, a numeric string nor other type, this function returns NaN.
 
@@ -61,13 +61,13 @@ The converted finite number, or NaN if failing to convert.
 
 ## Checked                                                                      
 
-### Node.js (4〜8)
+### Node.js (4〜9)
 
-| Platform  |   4    |   5    |   6    |   7    |   8    |
-|:---------:|:------:|:------:|:------:|:------:|:------:|
-| macOS     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
-| Windows10 |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
-| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Platform  |   4    |   5    |   6    |   7    |   8    |   9    |
+|:---------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Windows10 |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
 
 ### io.js (1〜3)
 
