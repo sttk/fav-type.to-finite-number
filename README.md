@@ -14,7 +14,7 @@ To install from npm:
 $ npm install --save @fav/type.to-finite-number
 ```
 
-***NOTE:*** *npm < 2.7.0 does not support scoped package, but even old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/type.to-finite-number/` directory manually.*
+***NOTE:*** *npm < 2.7.0 does not support scoped package, but old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/type.to-finite-number/` directory manually.*
 
 ## Usage
 
@@ -24,7 +24,9 @@ For Node.js:
 var toFiniteNumber = require('@fav/type.to-finite-number');
 toFiniteNumber(123); // => 123
 toFiniteNumber('45.6'); // => 45.6
-toFiniteNumber(7.89); // => 7.89
+toFiniteNumber(Infinity); // => NaN
+toFiniteNumber('ABC'); // =>> NaN
+toFiniteNumber('ABC', 100); // => 100
 ```
 
 For Web browsers:
@@ -40,21 +42,23 @@ toFiniteNumber(123); // => 123
 
 ## API
 
-### <u>toFiniteNumber(value): number</u>
+### <u>toFiniteNumber(value [, defaultValue]): number</u>
 
 Converts a number or a string to a finite number.
-If *value* is a floating point number, this function discards decimals.
-If *value* is neither a finite number, a numeric string nor other type, this function returns NaN.
+If *value* is neither a finite number nor a numeric string, this function returns NaN, or *defaultValue* if specified.
+
+***NOTE:*** `Number('')` and `Number(' ')` return `0`. `parseInt(' 123')`,  `parseInt('123abc')`, `parseFloat(' 123')` and `parseFloat('123abc')` return `123`. However, this function returns `NaN` in all such cases.
 
 #### Parameter:
 
-| Parameter |  Type  | Description                           |
-|-----------|:------:|---------------------------------------|
-| value     | *any*  | The number or string to be converted. |
+| Parameter      |  Type  | Description                           |
+|----------------|:------:|---------------------------------------|
+| *value*        | *any*  | The number or string to be converted. |
+| *defaultValue* | *any*  | Is returned when failing to convert. (Optional) | 
 
 #### Returns:
 
-The converted finite number, or NaN if failing to convert.
+The converted finite number, or NaN (or *defaultValue* if specified) when failing to convert.
 
 **Type:** number
 
@@ -96,7 +100,7 @@ The converted finite number, or NaN if failing to convert.
 
 ## License
 
-Copyright (C) 2017 Takayuki Sato
+Copyright (C) 2017-2018 Takayuki Sato
 
 This program is free software under [MIT][mit-url] License.
 See the file LICENSE in this distribution for more details.
