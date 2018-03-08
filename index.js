@@ -1,12 +1,10 @@
 'use strict';
 
-var isString = require('@fav/type.is-string');
 var isFiniteNumber = require('@fav/type.is-finite-number');
+var toNumber = require('@fav/type.to-number');
 
 function toFiniteNumber(value) {
-  if (isString(value)) {
-    value = parseFloat(value);
-  }
+  value = toNumber(value);
 
   if (isFiniteNumber(value)) {
     return value;
